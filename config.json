@@ -1,0 +1,8 @@
+{
+    "updater": {
+        "default": {
+            "provider": "github",
+            "repo": "ircbloqcc/external-resources-v2"
+        }
+    }
+}
