@@ -1,5 +1,5 @@
 const Amingo = () => ({
-    name: 'iBot V2',
+    name: 'Amingo',
     extensionId: 'Amingo',
     version: '1.0.0',
     supportDevice: 'Amingo_arduinoUno',
