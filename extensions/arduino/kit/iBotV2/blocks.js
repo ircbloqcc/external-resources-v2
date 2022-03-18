@@ -155,6 +155,72 @@ function addBlocks (Blockly) {
 		}
 	};
 	
+	Blockly.Blocks.iBotV2_touchSensor = {
+	init: function () {
+		this.jsonInit({
+			message0: Blockly.Msg.IBOTV2_TOUCHSENSOR,
+			args0: [
+                    {
+                        type: 'field_dropdown',
+                        name: 'sensorPin',
+                        options: [
+                            ['S1', 'A0'],
+                            ['S2', 'A1'],
+							['S4', 'A6'],
+							['S5', 'A7']
+                        ]
+                    }
+				 ],
+			colour: color,
+			extensions: ['output_boolean']
+			});
+		}
+	};
+	
+	Blockly.Blocks.iBotV2_IRSensor = {
+	init: function () {
+		this.jsonInit({
+			message0: Blockly.Msg.IBOTV2_IRSENSOR,
+			args0: [
+                    {
+                        type: 'field_dropdown',
+                        name: 'sensorPin',
+                        options: [
+                            ['S1', 'A0'],
+                            ['S2', 'A1'],
+							['S4', 'A6'],
+							['S5', 'A7']
+                        ]
+                    }
+				 ],
+			colour: color,
+			extensions: ['output_boolean']
+			});
+		}
+	};
+	
+	Blockly.Blocks.iBotV2_analogSensor = {
+	init: function () {
+		this.jsonInit({
+			message0: Blockly.Msg.IBOTV2_ANALOGSENSOR,
+			args0: [
+                    {
+                        type: 'field_dropdown',
+                        name: 'sensorPin',
+                        options: [
+                            ['S1', 'A0'],
+                            ['S2', 'A1'],
+							['S4', 'A6'],
+							['S5', 'A7']
+                        ]
+                    }
+				 ],
+			colour: color,
+			extensions: ['output_number']
+			});
+		}
+	};
+	
 	Blockly.Blocks.iBotV2_ultrasonic = {
 		init: function () {
 		this.jsonInit({

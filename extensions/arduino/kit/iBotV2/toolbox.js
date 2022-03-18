@@ -40,6 +40,12 @@ function addToolbox () {
 	</block>
 	<block type="iBotV2_lightSensor" id="iBotV2_lightSensor">
 	</block>
+	<block type="iBotV2_touchSensor" id="iBotV2_touchSensor">
+	</block>
+	<block type="iBotV2_IRSensor" id="iBotV2_IRSensor">
+	</block>
+	<block type="iBotV2_analogSensor" id="iBotV2_analogSensor">
+	</block>
 	<block type="iBotV2_ultrasonic" id="iBotV2_ultrasonic">
 	</block>
 	<block type="iBotV2_displayMisc" id="iBotV2_displayMisc">

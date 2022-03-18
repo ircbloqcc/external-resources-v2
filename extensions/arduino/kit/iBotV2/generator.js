@@ -57,6 +57,24 @@ function addGenerator (Blockly) {
 		return [`iBot.Lightsensor() == ${direc}`, Blockly.Arduino.ORDER_ATOMIC];
 	};
 	
+	Blockly.Arduino.iBotV2_touchSensor = function () {
+		const sensorPin = this.getFieldValue('sensorPin');
+		
+		return [`iBot.touchSensor(${sensorPin})`, Blockly.Arduino.ORDER_ATOMIC];
+	};
+	
+	Blockly.Arduino.iBotV2_IRSensor = function () {
+		const sensorPin = this.getFieldValue('sensorPin');
+		
+		return [`iBot.IRSensor(${sensorPin})`, Blockly.Arduino.ORDER_ATOMIC];
+	};
+	
+	Blockly.Arduino.iBotV2_analogSensor = function () {
+		const sensorPin = this.getFieldValue('sensorPin');
+		
+		return [`iBot.analogSensor(${sensorPin})`, Blockly.Arduino.ORDER_ATOMIC];
+	};
+	
 	Blockly.Arduino.iBotV2_ultrasonic = function () {
 	
 		return [`iBot.ultrasonic()`, Blockly.Arduino.ORDER_ATOMIC];
