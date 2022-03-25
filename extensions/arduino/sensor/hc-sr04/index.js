@@ -1,6 +1,6 @@
 const hcSr04 = formatMessage => ({
-    name: 'HC_SR04',
-    extensionId: 'hc_sr04',
+    name: 'Ultrasonic Sensor',
+    extensionId: 'HC-SR04',
     version: '1.0.0',
     supportDevice: ['arduinoUno', 'arduinoNano', 'arduinoMini', 'arduinoLeonardo',
         'arduinoMega2560', 'arduinoEsp32', 'arduinoEsp8266'],
