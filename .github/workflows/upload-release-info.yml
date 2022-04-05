@@ -21,4 +21,4 @@ jobs:
         run: |
           export DO_KEY_ID=${{ secrets.DO_KEY_ID }}
           export DO_SECRET_KEY=${{ secrets.DO_SECRET_KEY }}
-          upload-releaseInfo
+          upload-releaseInfo --repo=ircbloqcc/external-resources-v2
