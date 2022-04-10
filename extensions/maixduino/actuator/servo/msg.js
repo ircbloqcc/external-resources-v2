@@ -6,10 +6,6 @@ function addMsg (Blockly) {
         SERVO_MAIXDUINO_CATEGORY: 'Servo',
         SERVO_WRITE_MAIXDUINO: 'set servo pin %1 angle as %2 timer %3'
     });
-    Object.assign(Blockly.ScratchMsgs.locales['zh-cn'], {
-        SERVO_MAIXDUINO_CATEGORY: 'Servo',
-        SERVO_WRITE_MAIXDUINO: 'set servo pin %1 angle as %2 timer %3'
-    });
     return Blockly;
 }
 

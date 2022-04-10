@@ -16,21 +16,6 @@ function addMsg (Blockly) {
         LCD_STYLE_BLINK: 'blink',
         LCD_STYLE_NOBLINK: 'no-blink'
     });
-    Object.assign(Blockly.ScratchMsgs.locales['zh-cn'], {
-        LCD_CATEGORY: '1602 LCD',
-        LCD_INIT: '初始化 lcd I2C 地址 %1',
-        LCD_SETCURSORPOSITION: 'set lcd 光标位置 x: %1 y: %2',
-        LCD_PRINT: 'lcd 打印 %1',
-        LCD_CLEAR: '清空 lcd',
-        LCD_SETBACKLIGHT: '设置 lcd 背光 %1',
-        LCD_SATE_ON: '开',
-        LCD_SATE_OFF: '关',
-        LCD_SETCURSORSTYLE: '设置 lcd 光标 %1 样式 %2',
-        LCD_SATE_DISPLAY: '显示',
-        LCD_SATE_HIDE: '隐藏',
-        LCD_STYLE_BLINK: '闪烁',
-        LCD_STYLE_NOBLINK: '不闪烁'
-    });
     return Blockly;
 }
 
