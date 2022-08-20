@@ -3,6 +3,7 @@
 function addMsg (Blockly) {
     Object.assign(Blockly.ScratchMsgs.locales.en, {
         WIFIWEBSERVER_CATEGORY: 'WebServer',
+        WIFIWEBSERVER_BEGIN: 'Initialize WebServer with %1 baudrate',
         WIFIWEBSERVER_BEGIN: 'Connect SSID %1 Password %2 for WebServer',
         WIFIWEBSERVER_APBEGIN: 'Set SSID %1 Password %2 for Access Point',
 		    WIFIWEBSERVER_MAINPAGE: 'Create Main Page',

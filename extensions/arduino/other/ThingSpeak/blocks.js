@@ -9,6 +9,28 @@ function addBlocks (Blockly) {
             this.jsonInit({
                 message0: Blockly.Msg.THINGSPEAK_BEGIN,
                 args0: [{
+                        type: 'field_dropdown',
+                        name: 'baudrate',
+                        options: [
+                            ['4800', '4800'],
+                            ['9600', '9600'],
+                            ['19200', '19200'],
+                            ['38400', '38400'],
+                            ['57600', '57600'],
+                            ['76800', '76800'],
+                            ['115200', '115200']]
+                    }],
+                colour: color,
+                extensions: ['shape_statement']
+            });
+        }
+    };
+
+    Blockly.Blocks.ThingSpeak_wifi = {
+        init: function () {
+            this.jsonInit({
+                message0: Blockly.Msg.THINGSPEAK_WIFI,
+                args0: [{
                     type: 'input_value',
                     name: 'tsssid'
                 }, {
@@ -38,7 +60,7 @@ function addBlocks (Blockly) {
             });
         }
     };
-	
+
     Blockly.Blocks.ThingSpeak_send = {
         init: function () {
             this.jsonInit({
@@ -65,7 +87,7 @@ function addBlocks (Blockly) {
             });
         }
     };
-	
+
 	Blockly.Blocks.ThingSpeak_push = {
         init: function () {
             this.jsonInit({
@@ -83,7 +105,7 @@ function addBlocks (Blockly) {
             });
         }
     };
-	
+
 	Blockly.Blocks.ThingSpeak_multi = {
         init: function () {
             this.jsonInit({
@@ -110,7 +132,7 @@ function addBlocks (Blockly) {
             });
         }
     };
-		
+
 	Blockly.Blocks.ThingSpeak_status = {
         init: function () {
             this.jsonInit({

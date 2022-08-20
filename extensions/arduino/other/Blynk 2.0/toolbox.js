@@ -17,7 +17,7 @@ function addToolbox () {
         </value>
     </block>
 	<block type="Blynk_begin" id="Blynk_begin">
-	<field name="baudrate">115200</field>
+	<field name="baudrate">76800</field>
     </block>
 	<block type="Blynk_userid" id="Blynk_userid">
         <value name="blynkssid">
@@ -36,10 +36,10 @@ function addToolbox () {
             </shadow>
         </value>
     </block>
-	
+
 	<block type="Blynk_start" id="Blynk_start">
     </block>
-    
+
 	<block type="Blynk_receive" id="Blynk_receive">
         <value name="blynkin">
             <shadow type="math_number">
@@ -52,7 +52,7 @@ function addToolbox () {
             </shadow>
         </value>
     </block>
-	
+
     <block type="Blynk_send" id="Blynk_send">
         <value name="blynkout">
             <shadow type="text">
@@ -70,7 +70,7 @@ function addToolbox () {
             </shadow>
         </value>
     </block>
-	
+
 	<block type="Blynk_string" id="Blynk_string">
         <value name="blynkstr">
             <shadow type="text">
@@ -78,7 +78,7 @@ function addToolbox () {
             </shadow>
         </value>
     </block>
-	
+
 	<block type="Blynk_stringeql" id="Blynk_stringeql">
         <value name="blynkstr">
             <block type="Blynk_string" id="Blynk_string">
@@ -95,8 +95,8 @@ function addToolbox () {
             </shadow>
         </value>
     </block>
-    
-    
+
+
 </category>`;
 }
 

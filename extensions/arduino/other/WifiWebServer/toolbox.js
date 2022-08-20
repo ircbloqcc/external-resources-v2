@@ -5,6 +5,9 @@ function addToolbox () {
     return `
 <category name="%{BKY_WIFIWEBSERVER_CATEGORY}" id="WIFIWEBSERVER_CATEGORY" colour="#3333ff" secondaryColour="#3333ff">
     <block type="wifiWebServer_begin" id="wifiWebServer_begin">
+      <field name="baudrate">76800</field>
+    </block>
+    <block type="wifiWebServer_wifi" id="wifiWebServer_wifi">
         <value name="locssid">
             <shadow type="text">
                 <field name="TEXT">ssid</field>
@@ -16,7 +19,7 @@ function addToolbox () {
             </shadow>
         </value>
     </block>
-    
+
     <block type="wifiWebServer_apbegin" id="wifiWebServer_apbegin">
         <value name="locssid">
             <shadow type="text">

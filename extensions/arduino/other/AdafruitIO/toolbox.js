@@ -4,7 +4,10 @@
 function addToolbox () {
     return `
 <category name="%{BKY_ADAFRUITIO_CATEGORY}" id="ADAFRUITIO_CATEGORY" colour="#0d7d23" secondaryColour="#0d7d23">
-    <block type="adafruitIO_begin" id="adafruitIO_begin">
+  <block type="adafruitIO_begin" id="adafruitIO_begin">
+  <field name="baudrate">76800</field>
+  </block>
+    <block type="adafruitIO_wifi" id="adafruitIO_wifi">
         <value name="aiossid">
             <shadow type="text">
                 <field name="TEXT">ssid</field>
@@ -16,7 +19,7 @@ function addToolbox () {
             </shadow>
         </value>
     </block>
-    
+
     <block type="adafruitIO_userid" id="adafruitIO_userid">
         <value name="aiouserid">
             <shadow type="text">
@@ -29,10 +32,10 @@ function addToolbox () {
             </shadow>
         </value>
     </block>
-	
+
 	<block type="adafruitIO_run" id="adafruitIO_run">
 	</block>
-    
+
 	<block type="adafruitIO_receive" id="adafruitIO_receive">
         <value name="aioin">
             <shadow type="math_number">
@@ -50,7 +53,7 @@ function addToolbox () {
             </shadow>
         </value>
     </block>
-	
+
     <block type="adafruitIO_send" id="adafruitIO_send">
         <value name="aioout">
             <shadow type="math_number">
@@ -68,7 +71,7 @@ function addToolbox () {
             </shadow>
         </value>
     </block>
-	
+
 	<block type="adafruitIO_string" id="adafruitIO_string">
         <value name="aiostr">
             <shadow type="text">
@@ -76,7 +79,7 @@ function addToolbox () {
             </shadow>
         </value>
     </block>
-	
+
 	<block type="adafruitIO_stringeql" id="adafruitIO_stringeql">
         <value name="aiostr">
             <block type="adafruitIO_string" id="adafruitIO_string">

@@ -5,6 +5,9 @@ function addToolbox () {
     return `
 <category name="%{BKY_LOCALSERVER_CATEGORY}" id="LOCALSERVER_CATEGORY" colour="#f00a5e" secondaryColour="#f00a5e">
     <block type="localServer_begin" id="localServer_begin">
+      <field name="baudrate">76800</field>
+    </block>
+    <block type="localServer_wifi" id="localServer_wifi">
         <value name="locssid">
             <shadow type="text">
                 <field name="TEXT">ssid</field>
@@ -16,7 +19,7 @@ function addToolbox () {
             </shadow>
         </value>
     </block>
-    
+
     <block type="localServer_apbegin" id="localServer_apbegin">
         <value name="locssid">
             <shadow type="text">
@@ -32,7 +35,7 @@ function addToolbox () {
 
     <block type="localServer_getRequest" id="localServer_getRequest">
     </block>
-    
+
     <block type="localServer_chkRequest" id="localServer_chkRequest">
     <value name="request">
             <shadow type="text">

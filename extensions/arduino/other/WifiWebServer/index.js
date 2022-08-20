@@ -5,7 +5,7 @@ const wifiWebServer = formatMessage => ({
         description: 'Name of Wifi Web Server'
     }),
     extensionId: 'wifiWebServer',
-    version: '1.0.0',
+    version: '1.0.1',
     supportDevice: ['arduinoEsp8266','arduinoEsp32'],
     author: 'iRobochakra',
     iconURL: `asset/wifiWebServer.png`,

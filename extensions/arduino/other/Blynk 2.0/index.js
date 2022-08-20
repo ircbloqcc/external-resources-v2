@@ -5,7 +5,7 @@ const Blynk = formatMessage => ({
         description: 'Name of Blynk new server'
     }),
     extensionId: 'Blynk',
-    version: '2.0.0',
+    version: '2.1.0',
     supportDevice: ['arduinoEsp8266','arduinoEsp32'],
     author: 'iRobochakra',
     iconURL: `asset/Blynk.png`,

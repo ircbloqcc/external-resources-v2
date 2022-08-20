@@ -11,7 +11,7 @@ function addGenerator (Blockly) {
 		Blockly.Arduino.setups_.Blynk_init = `Serial.begin(${baudrate});`;
       return '';
     };
-	
+
 	Blockly.Arduino.Blynk_templateid = function (block) {
       // const no = Blockly.Arduino.valueToCode(block, 'no', Blockly.Arduino.ORDER_ATOMIC);
        const blynktempid = Blockly.Arduino.valueToCode(block, 'blynktempid', Blockly.Arduino.ORDER_ATOMIC);
@@ -21,7 +21,7 @@ function addGenerator (Blockly) {
 #define BLYNK_DEVICE_NAME ${blynkdname}`;
       return '';
    };
-     
+
     Blockly.Arduino.Blynk_userid = function (block) {
       // const no = Blockly.Arduino.valueToCode(block, 'no', Blockly.Arduino.ORDER_ATOMIC);
        const blynkssid = Blockly.Arduino.valueToCode(block, 'blynkssid', Blockly.Arduino.ORDER_ATOMIC);
@@ -36,17 +36,17 @@ char pass[] = ${blynkpass};`;
 		Blockly.Arduino.setups_.Blynk_userid = `Blynk.begin(auth, ssid, pass);`;
 		return '';
    };
-   
+
    Blockly.Arduino.Blynk_start = function (block) {
        // const no = Blockly.Arduino.valueToCode(block, 'no', Blockly.Arduino.ORDER_ATOMIC);
       return 'Blynk.run();\n';
     };
-   
+
    Blockly.Arduino.Blynk_receive = function (block) {
     // const no = Blockly.Arduino.valueToCode(block, 'no', Blockly.Arduino.ORDER_ATOMIC);
      const blynkin = Blockly.Arduino.valueToCode(block, 'blynkin', Blockly.Arduino.ORDER_ATOMIC);
      const vpin = Blockly.Arduino.valueToCode(block, 'vpin', Blockly.Arduino.ORDER_ATOMIC);
-    
+
      Blockly.Arduino.definitions_[`Blynk_vpin_${vpin}`] =
  `BLYNK_WRITE(V${vpin}){
   ${blynkin} = param.asDouble();
@@ -65,13 +65,13 @@ char pass[] = ${blynkpass};`;
 `void myTimerEvent_${vpin}(){
 	Blynk.virtualWrite(V${vpin}, ${blynkout});
  }`;
- 
-  Blockly.Arduino.setups_[`Blynk_timer_${vpin}`] = 
+
+  Blockly.Arduino.setups_[`Blynk_timer_${vpin}`] =
   `timer.setInterval(${msec}L, myTimerEvent_${vpin});`;
   Blockly.Arduino.loops_[`Blynk_run_timer`]=
   `timer.run();`;
  return '';
-};  
+};
 
 Blockly.Arduino.Blynk_string = function (block) {
         var blynkstr = Blockly.Arduino.valueToCode(block, 'blynkstr', Blockly.Arduino.ORDER_ATOMIC);
@@ -79,14 +79,14 @@ Blockly.Arduino.Blynk_string = function (block) {
         Blockly.Arduino.definitions_[`Blynk_${blynkstr}`] = `String ${blynkstr};`;
 		return [`${blynkstr}`, Blockly.Arduino.ORDER_ATOMIC];
     };
-	
+
  Blockly.Arduino.Blynk_stringeql = function (block) {
 		var blynkstr = Blockly.Arduino.valueToCode(block, 'blynkstr', Blockly.Arduino.ORDER_ATOMIC);
 		blynkstr = blynkstr.replace(/\"/g, "");
         var blynkstreq = Blockly.Arduino.valueToCode(block, 'blynkstreq', Blockly.Arduino.ORDER_ATOMIC);
 		return `${blynkstr} = ${blynkstreq};\n`;
     };
-	
+
     return Blockly;
 }
 

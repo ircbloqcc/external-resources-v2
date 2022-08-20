@@ -4,7 +4,10 @@
 function addToolbox () {
     return `
 <category name="%{BKY_THINGSPEAK_CATEGORY}" id="THINGSPEAK_CATEGORY" colour="#2f7eb2" secondaryColour="#2f7eb2">
-    <block type="ThingSpeak_begin" id="ThingSpeak_begin">
+    <block type="adafruitIO_begin" id="adafruitIO_begin">
+        <field name="baudrate">76800</field>
+    </block>
+    <block type="ThingSpeak_wifi" id="ThingSpeak_wifi">
         <value name="tsssid">
             <shadow type="text">
                 <field name="TEXT">ssid</field>
@@ -16,7 +19,7 @@ function addToolbox () {
             </shadow>
         </value>
     </block>
-    
+
     <block type="ThingSpeak_userid" id="ThingSpeak_userid">
         <value name="tsuserid">
             <shadow type="math_number">
@@ -29,7 +32,7 @@ function addToolbox () {
             </shadow>
         </value>
     </block>
-    
+
     <block type="ThingSpeak_send" id="ThingSpeak_send">
         <value name="tsout">
             <shadow type="math_number">
@@ -44,7 +47,7 @@ function addToolbox () {
     </block>
 
 	<block type="ThingSpeak_push" id="ThingSpeak_push"></block>
-	
+
 	<block type="ThingSpeak_multi" id="ThingSpeak_multi">
         <value name="tsmout">
             <shadow type="math_number">
@@ -57,8 +60,8 @@ function addToolbox () {
             </shadow>
         </value>
     </block>
-	
-	
+
+
 	<block type="ThingSpeak_status" id="ThingSpeak_status">
         <value name="tsstatus">
             <shadow type="text">
@@ -66,7 +69,7 @@ function addToolbox () {
             </shadow>
         </value>
     </block>
-    
+
 </category>`;
 }
 

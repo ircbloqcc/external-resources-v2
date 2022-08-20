@@ -3,7 +3,8 @@
 function addMsg (Blockly) {
     Object.assign(Blockly.ScratchMsgs.locales.en, {
         ADAFRUITIO_CATEGORY: 'Adafruit IO',
-        ADAFRUITIO_BEGIN: 'Connect SSID %1 Password %2 for AdafruitIO',
+        ADAFRUITIO_BEGIN: 'Initialize AdafruitIO Server with %1 baudrate',
+        ADAFRUITIO_WIFI: 'Connect SSID %1 Password %2 for AdafruitIO',
         ADAFRUITIO_USERID: 'Set Username %1 AIO Key %2 for AdafruitIO',
 		ADAFRUITIO_RUN: 'Run AdafruitIO',
         ADAFRUITIO_RECEIVE: 'Receive %1 data as %2 in feed %3 from AdafruitIO Feed Name %4',

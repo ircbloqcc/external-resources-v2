@@ -5,7 +5,7 @@ const localServer = formatMessage => ({
         description: 'Name of Local Server'
     }),
     extensionId: 'localServer',
-    version: '1.0.0',
+    version: '1.0.1',
     supportDevice: ['arduinoEsp8266','arduinoEsp32'],
     author: 'iRobochakra',
     iconURL: `asset/localServer.png`,

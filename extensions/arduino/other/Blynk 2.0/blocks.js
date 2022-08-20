@@ -3,7 +3,7 @@
 /* eslint-disable require-jsdoc */
 function addBlocks (Blockly) {
     const color = '#23be8a';
-	
+
     Blockly.Blocks.Blynk_begin = {
         init: function () {
             this.jsonInit({
@@ -17,6 +17,7 @@ function addBlocks (Blockly) {
                             ['19200', '19200'],
                             ['38400', '38400'],
                             ['57600', '57600'],
+                            ['76800', '76800'],
                             ['115200', '115200']]
                     }],
                 colour: color,
@@ -42,8 +43,8 @@ function addBlocks (Blockly) {
             });
         }
     };
-	
-	
+
+
 	Blockly.Blocks.Blynk_userid = {
         init: function () {
             this.jsonInit({
@@ -75,7 +76,7 @@ function addBlocks (Blockly) {
             });
         }
     };
-	
+
 	Blockly.Blocks.Blynk_receive = {
         init: function () {
             this.jsonInit({
@@ -115,7 +116,7 @@ function addBlocks (Blockly) {
             });
         }
     };
-	
+
 	Blockly.Blocks.Blynk_string = {
         init: function () {
             this.jsonInit({
@@ -148,7 +149,7 @@ function addBlocks (Blockly) {
         }
     };
 
-    
+
 
     return Blockly;
 }

@@ -2,23 +2,29 @@
 /* eslint-disable max-len */
 /* eslint-disable require-jsdoc */
 function addGenerator (Blockly) {
-    Blockly.Arduino.localServer_begin = function (block) {
-       // const no = Blockly.Arduino.valueToCode(block, 'no', Blockly.Arduino.ORDER_ATOMIC);
-        const locssid = Blockly.Arduino.valueToCode(block, 'locssid', Blockly.Arduino.ORDER_ATOMIC);
-        const locpswd = Blockly.Arduino.valueToCode(block, 'locpswd', Blockly.Arduino.ORDER_ATOMIC);
-
-        Blockly.Arduino.includes_.localServer_init = 
-    `#ifdef ESP32
+  Blockly.Arduino.localServer_begin = function (block) {
+      const baudrate = this.getFieldValue('baudrate');
+      Blockly.Arduino.includes_.localServer_init =
+  `#ifdef ESP32
 #include <WiFi.h>
 #else
 #include <ESP8266WiFi.h>
 #endif`;
-        Blockly.Arduino.definitions_[`localServer_begin`] =
+      Blockly.Arduino.setups_.localServer_init = `Serial.begin(${baudrate});`;
+
+     return '';
+  };
+
+    Blockly.Arduino.localServer_wifi = function (block) {
+       // const no = Blockly.Arduino.valueToCode(block, 'no', Blockly.Arduino.ORDER_ATOMIC);
+        const locssid = Blockly.Arduino.valueToCode(block, 'locssid', Blockly.Arduino.ORDER_ATOMIC);
+        const locpswd = Blockly.Arduino.valueToCode(block, 'locpswd', Blockly.Arduino.ORDER_ATOMIC);
+
+        Blockly.Arduino.definitions_[`localServer_wifi`] =
     `const char* ssid = ${locssid};\nconst char* password = ${locpswd};\nWiFiServer server(80);`;
 
-         Blockly.Arduino.setups_[`localServer_begin`] =
-    `Serial.begin(115200);
-    WiFi.begin(ssid,password);
+         Blockly.Arduino.setups_[`localServer_wifi`] =
+    `WiFi.begin(ssid,password);
      while (WiFi.status() != WL_CONNECTED) {
         Serial.print(".");
         delay(500);
@@ -30,13 +36,13 @@ function addGenerator (Blockly) {
     Serial.println(WiFi.localIP());`;
        return '';
     };
-     
+
     Blockly.Arduino.localServer_apbegin = function (block) {
         // const no = Blockly.Arduino.valueToCode(block, 'no', Blockly.Arduino.ORDER_ATOMIC);
          const locssid = Blockly.Arduino.valueToCode(block, 'locssid', Blockly.Arduino.ORDER_ATOMIC);
          const locpswd = Blockly.Arduino.valueToCode(block, 'locpswd', Blockly.Arduino.ORDER_ATOMIC);
- 
-         Blockly.Arduino.includes_.localServer_init = 
+
+         Blockly.Arduino.includes_.localServer_init =
     `#ifdef ESP32
 #include <WiFi.h>
 #else
@@ -44,7 +50,7 @@ function addGenerator (Blockly) {
 #endif`;
          Blockly.Arduino.definitions_[`localServer_begin`] =
      `const char* ssid = ${locssid};\nconst char* password = ${locpswd};\nWiFiServer server(80);`;
- 
+
           Blockly.Arduino.setups_[`localServer_begin`] =
      `Serial.begin(115200);
      WiFi.softAP(ssid,password);
@@ -65,13 +71,13 @@ function addGenerator (Blockly) {
      Serial.println(request_);\n`
         return data;
    };
-   
+
    Blockly.Arduino.localServer_chkRequest = function (block) {
     var request = Blockly.Arduino.valueToCode(block, 'request', Blockly.Arduino.ORDER_ATOMIC);
     request = request.replace(/\"/g, "");
     return [`request_.indexOf(\"/${request}\") != -1`, Blockly.Arduino.ORDER_ATOMIC];
    };
-  
+
    Blockly.Arduino.localServer_clientFlush = function (block) {
     //const request = Blockly.Arduino.valueToCode(block, 'request', Blockly.Arduino.ORDER_ATOMIC);
     return 'client.flush();\n';
@@ -94,7 +100,7 @@ function addGenerator (Blockly) {
     var BtText = Blockly.Arduino.valueToCode(block, 'BtText', Blockly.Arduino.ORDER_ATOMIC);
     BtText = BtText.replace(/\"/g, "");
     const warp = this.getFieldValue('warp');
-     var data = 
+     var data =
     'client.print(\"<a href=\\\"/' + req_cmd + '\\\"\\\"><button>' + BtText + '</button></a>'+ warp + '\");\n';
     return data;
    };

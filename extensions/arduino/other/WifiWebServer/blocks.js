@@ -9,6 +9,28 @@ function addBlocks (Blockly) {
             this.jsonInit({
                 message0: Blockly.Msg.WIFIWEBSERVER_BEGIN,
                 args0: [{
+                        type: 'field_dropdown',
+                        name: 'baudrate',
+                        options: [
+                            ['4800', '4800'],
+                            ['9600', '9600'],
+                            ['19200', '19200'],
+                            ['38400', '38400'],
+                            ['57600', '57600'],
+                            ['76800', '76800'],
+                            ['115200', '115200']]
+                    }],
+                colour: color,
+                extensions: ['shape_statement']
+            });
+        }
+    };
+
+    Blockly.Blocks.wifiWebServer_wifi = {
+        init: function () {
+            this.jsonInit({
+                message0: Blockly.Msg.WIFIWEBSERVER_WIFI,
+                args0: [{
                     type: 'input_value',
                     name: 'locssid'
                 }, {
@@ -51,7 +73,7 @@ function addBlocks (Blockly) {
             });
         }
     };
-		
+
 	Blockly.Blocks.wifiWebServer_mainPage = {
         init: function () {
             this.jsonInit({
@@ -62,7 +84,7 @@ function addBlocks (Blockly) {
             });
         }
     };
-	
+
     Blockly.Blocks.wifiWebServer_guiLabel = {
         init: function () {
             this.jsonInit({
@@ -90,7 +112,7 @@ function addBlocks (Blockly) {
 				{
                     type: 'input_value',
                     name: 'req_cmd'
-                }, 
+                },
 				{
                     type: 'input_value',
                     name: 'BtText'
@@ -100,7 +122,7 @@ function addBlocks (Blockly) {
                     name: 'warp',
                     options:[
                     ['Space','&nbsp'],
-                    ['NewLine','<br><br>'] 
+                    ['NewLine','<br><br>']
                     ]
                 }
             ],
@@ -109,7 +131,7 @@ function addBlocks (Blockly) {
             });
         }
     };
-		
+
 	Blockly.Blocks.wifiWebServer_guiSlider = {
         init: function () {
             this.jsonInit({
@@ -135,7 +157,7 @@ function addBlocks (Blockly) {
                     name: 'warp',
                     options:[
                     ['Space','&nbsp'],
-                    ['NewLine','<br><br>'] 
+                    ['NewLine','<br><br>']
                     ]
                 }
             ],
@@ -144,7 +166,7 @@ function addBlocks (Blockly) {
             });
         }
     };
-	
+
 	Blockly.Blocks.wifiWebServer_handleClient = {
         init: function () {
             this.jsonInit({
@@ -155,7 +177,7 @@ function addBlocks (Blockly) {
             });
         }
     };
-	
+
 	Blockly.Blocks.wifiWebServer_string = {
         init: function () {
             this.jsonInit({
