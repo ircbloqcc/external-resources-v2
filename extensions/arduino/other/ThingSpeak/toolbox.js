@@ -4,7 +4,7 @@
 function addToolbox () {
     return `
 <category name="%{BKY_THINGSPEAK_CATEGORY}" id="THINGSPEAK_CATEGORY" colour="#2f7eb2" secondaryColour="#2f7eb2">
-    <block type="adafruitIO_begin" id="adafruitIO_begin">
+    <block type="ThingSpeak_begin" id="ThingSpeak_begin">
         <field name="baudrate">76800</field>
     </block>
     <block type="ThingSpeak_wifi" id="ThingSpeak_wifi">

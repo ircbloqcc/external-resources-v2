@@ -4,7 +4,7 @@ function addMsg (Blockly) {
     Object.assign(Blockly.ScratchMsgs.locales.en, {
         THINGSPEAK_CATEGORY: 'Thing Speak',
         THINGSPEAK_BEGIN: 'Initialize ThingSpeak Server with %1 baudrate',
-        THINGSPEAK_BEGIN: 'Connect SSID %1 Password %2 for ThingSpeak',
+        THINGSPEAK_WIFI: 'Connect SSID %1 Password %2 for ThingSpeak',
         THINGSPEAK_USERID: 'Set Channel ID %1 API Key AIO Key %2 for ThingSpeak',
         THINGSPEAK_SEND: 'Send %1 data to Field %2 in ThingSpeak',
 		THINGSPEAK_PUSH: 'Send to Multi Field %1  %2',

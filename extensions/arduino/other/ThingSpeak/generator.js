@@ -3,7 +3,7 @@
 /* eslint-disable require-jsdoc */
 function addGenerator (Blockly) {
 
-  Blockly.Arduino.adafruitIO_begin = function (block) {
+  Blockly.Arduino.ThingSpeak_begin = function (block) {
     Blockly.Arduino.includes_.ThingSpeak_init =
 `#include <ESP8266WiFi.h>
 #include <WiFiClient.h>
