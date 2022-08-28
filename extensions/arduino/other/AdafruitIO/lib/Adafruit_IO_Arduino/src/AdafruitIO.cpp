@@ -30,7 +30,7 @@
  *
  * @section license License
  *
- * MIT license, all text here must be included in any redistribution.
+ * BSD license, all text here must be included in any redistribution.
  *
  */
 #include "AdafruitIO.h"

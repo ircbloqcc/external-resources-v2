@@ -9,7 +9,7 @@
  *
  * Written by Tony DiCola, Todd Treece for Adafruit Industries
  *
- * MIT license, all text here must be included in any redistribution.
+ * BSD license, all text here must be included in any redistribution.
  *
  */
 #ifndef ADAFRUITIO_WIFI_H
@@ -19,11 +19,6 @@
 
 #include "wifi/AdafruitIO_MKR1000.h"
 typedef AdafruitIO_MKR1000 AdafruitIO_WiFi;
-
-#elif defined(ARDUINO_SAMD_MKR1010)
-
-#include "wifi/AdafruitIO_MKR1010.h"
-typedef AdafruitIO_MKR1010 AdafruitIO_WiFi;
 
 #elif defined(ADAFRUIT_METRO_M4_AIRLIFT_LITE) || defined(ADAFRUIT_PYPORTAL) || \
     defined(USE_AIRLIFT)
