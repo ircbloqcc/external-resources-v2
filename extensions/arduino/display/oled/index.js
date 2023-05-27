@@ -5,7 +5,7 @@ const oled = formatMessage => ({
     supportDevice: ['arduinoUno', 'arduinoNano', 'arduinoMini', 'arduinoLeonardo',
         'arduinoMega2560', 'arduinoEsp32', 'arduinoEsp8266'],
     author: 'iRobochakra',
-    iconURL: `asset/oled.png`,
+    iconURL: `asset/OLED.png`,
     description: formatMessage({
         id: 'oled.description',
         default: 'I2C oled display based on SSD1306 drivers.'

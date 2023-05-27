@@ -8,7 +8,7 @@ const adafruitIO = formatMessage => ({
     version: '1.1.1',
     supportDevice: ['arduinoEsp8266','arduinoEsp32'],
     author: 'iRobochakra',
-    iconURL: `asset/adafruitIO.png`,
+    iconURL: `asset/AdafruitIO.png`,
     description: formatMessage({
         id: 'adafruitIO.description',
         default: 'Adafruit IO is the easiest way to get your projects onto the Internet of Things!',
