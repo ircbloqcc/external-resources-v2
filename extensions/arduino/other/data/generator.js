@@ -37,6 +37,21 @@ function addGenerator (Blockly) {
 		case 'STRING':
 		  code = 'String(' + arg0 + ')';
 		  break;
+		case 'CHARARRAY':
+		Blockly.Arduino.definitions_[`Chararray`] = 
+	`char* C_chararray(float received_data){
+	String Data_convert_to_string = String(received_data);
+    if(Data_convert_to_string.indexOf('.') != -1){
+        int get_point_index = Data_convert_to_string.indexOf('.');
+        if(Data_convert_to_string[get_point_index+1] == '0' && Data_convert_to_string[get_point_index+2] == '0'){
+          Data_convert_to_string[get_point_index] = '\\0';
+		}
+    }
+	static char myString_to_char[30];
+	return (strcpy(myString_to_char, Data_convert_to_string.c_str()));
+	}`;
+		  code = 'C_chararray(' + arg0 + ')';
+		  break;
 		}
         return [code, Blockly.Arduino.ORDER_ATOMIC];
     };

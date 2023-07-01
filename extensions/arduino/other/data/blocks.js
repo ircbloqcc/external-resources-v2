@@ -74,7 +74,8 @@ function addBlocks (Blockly) {
                         options: [
                             ['integer', 'INTEGER'],
                             ['decimal', 'DECIMAL'],
-                            ['string', 'STRING']]
+                            ['string', 'STRING'],
+							['char*', 'CHARARRAY']]
                     }
                 ],
                 colour: color,
